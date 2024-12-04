@@ -39,7 +39,7 @@ if [ "$INPUT_FILES" ]; then
     add_arg_if_not_empty "-filelist" "./filelist.txt"
 fi
 
-dotnet ./depotdownloader/DepotDownloader.dll $args
+./DepotDownloader $args
 
 if [ "$INPUT_KEEP_DEPOTDOWNLOADER" != "true" ]; then
     # Delete .DepotDownloader folder
